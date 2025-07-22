@@ -1,6 +1,7 @@
 package interview;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -44,7 +45,7 @@ public class TestProgram2 {
     	//empMap.entrySet().stream().sorted(Comparator.comparing(Map.Entry<String, Employee> entry -> entry.))
     	
     	empMap.entrySet().stream().sorted( (entry1, entry2) -> entry1.getValue().salary.intValue() - entry2.getValue().salary.intValue())
-    	      .collect(Collectors.toMap(null, null))
+    	      .collect(Collectors.toMap(null, null));
 
     	
     	
@@ -80,7 +81,7 @@ public class TestProgram2 {
         empMap.put("e4", e4);
 
 
-        printEmployeeName(empMap, "25");
+      //  printEmployeeName(empMap, "25");
 
 
     }

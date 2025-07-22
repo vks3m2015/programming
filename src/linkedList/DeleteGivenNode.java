@@ -15,7 +15,6 @@ public class DeleteGivenNode {
     }
 
 	public static void main(String[] args) {
-		
 		int[] arr = {1,2,3,4,5,6};
 		ListNode head = LinkedListOps.buildFromArray(arr);
 		deleteNode(head.next.next.next);  //delete 4

@@ -13,7 +13,7 @@ public class Test15 {
 		
 		String[] stArr = st.split("\\s");
 		
-		//Comparator<String> comp = (key1,  key2) -> entry2.getValue() - entry1.getValue(); 
+		/*Comparator<String> comp = (key1,  key2) -> entry2.getValue() - entry1.getValue();
 		
 		
 		
@@ -26,7 +26,7 @@ public class Test15 {
 		
 		for(String str : stArr) {
 			map.put(str, map.getOrDefault(str, 0)+1);
-		}
+		}*/
 		
 	}
 

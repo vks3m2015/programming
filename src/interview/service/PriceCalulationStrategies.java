@@ -2,7 +2,7 @@ package interview.service;
 
 import java.util.Map;
 
-import entitity.MovieCode;
+import interview.entitity.MovieCode;
 
 public class PriceCalulationStrategies {
 	

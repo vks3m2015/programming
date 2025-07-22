@@ -33,27 +33,6 @@ public class Singleton {
 	
 	
 	}
-	
-	
-	
-	
-	
-	
-	
-	@Test
-	m(){
-		
-	}
-	
-	
-	@Test
-	
-	
-
-	
 }
 
 
-
-null null -> 
-alter table tb add constraint unique(,, )

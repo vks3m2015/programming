@@ -35,7 +35,7 @@ public class Test19 {
 	
 	
 	
-	static void removeDuplicate(int[] arr){
+	static int[] removeDuplicate(int[] arr){
 		
 		
 		int slow =0;

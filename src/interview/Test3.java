@@ -17,7 +17,7 @@ public class Test3 {
 		   }
 		   
 	   }
-	   
+	  return slow;
 	   
     }
 }

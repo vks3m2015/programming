@@ -1,6 +1,6 @@
 package interview.service;
 
-import entitity.MovieRental;
+import interview.entitity.MovieRental;
 
 public class NewMovieCharges implements MovieCharges{
 	

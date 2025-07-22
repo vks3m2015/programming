@@ -1,6 +1,8 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MajorityElement {
 
@@ -86,6 +88,24 @@ public class MajorityElement {
 	
 	//HashMap Approach
 	public static int majorityElement_4(int[] nums) {
+		Map<Integer, Integer> countMap = new HashMap<>();
+
+		int majEle = -1;
+		for(int num : nums){
+			Integer count = countMap.get(num);
+			if(count == null){
+				countMap.put(num, 1);
+			}else{
+				countMap.put(num, count+1  );
+			}
+			if(count > Arrays.asList(nums).size()/2){
+				return num;
+			}
+
+		}
+
+
+
 		return -1;
 	}
 	

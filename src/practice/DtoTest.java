@@ -1,7 +1,6 @@
 package practice;
 
 import java.util.ArrayList;
-import com.google.gson.Gson;
 
 
 public class DtoTest {
@@ -32,12 +31,12 @@ public class DtoTest {
 		arrList.add(dtoTest1);
 		arrList.add(dtoTest2);
 		
-		Gson gsonObj = new Gson();
+		/*Gson gsonObj = new Gson();
 		String gsonStr = gsonObj.toJson(arrList);
 		
 		System.out.println(arrList +"--------"+gsonStr); 
 		
-		System.out.println("  printing object ===  "+gsonObj.toJson(dtoTest1));
+		System.out.println("  printing object ===  "+gsonObj.toJson(dtoTest1));*/
 		
 	}
 }

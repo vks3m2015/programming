@@ -1,10 +1,11 @@
 package interview.service;
 import java.util.HashMap;
 
-import entitity.Customer;
-import entitity.Movie;
-import entitity.MovieCode;
-import entitity.MovieRental;
+
+import interview.entitity.Customer;
+import interview.entitity.Movie;
+import interview.entitity.MovieCode;
+import interview.entitity.MovieRental;
 
 public class RentalInfo {
 
