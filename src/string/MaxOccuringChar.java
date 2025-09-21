@@ -9,8 +9,7 @@ public class MaxOccuringChar {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		while(true)
-		{	
+		while(true) {
 		System.out.println(" Enter string");
 		String str = sc.nextLine();
 		
@@ -24,23 +23,19 @@ public class MaxOccuringChar {
 
 	}
 	
-	public static char maxChar(String str)
-	{
+	public static char maxChar(String str) {
 		 final int ASCII_SIZE = 256;
 		 int[] count = new int[ASCII_SIZE];
 		 
-		 for(int i=0; i< str.length(); i++)
-		 {
+		 for(int i=0; i< str.length(); i++) {
 			 count[str.charAt(i)]++;
 		 }	 
 		 
 		 int max = -1;
 		 char result = ' ';
 		 
-		 for(int i=0; i< str.length(); i++)
-		 {
-			 if(count[str.charAt(i)] > max) 
-			 {	 
+		 for(int i=0; i< str.length(); i++) {
+			 if(count[str.charAt(i)] > max) {
 				 max = count[str.charAt(i)];
 				 result = str.charAt(i);
 			 
@@ -48,5 +43,4 @@ public class MaxOccuringChar {
 		 }	 
 		 return result;
 	}
-
 }

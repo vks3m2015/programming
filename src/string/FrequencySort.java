@@ -10,6 +10,14 @@ import java.util.PriorityQueue;
 import java.util.TreeMap;
 
 public class FrequencySort {
+
+	public static void main(String[] args) {
+		String str = frequencySort("tree");
+		System.out.println(str);
+
+		String str2 = frequencySort2("tree");
+		System.out.println(str2);
+	}
 	
    public static String frequencySort(String s) {
 		
@@ -62,13 +70,4 @@ public class FrequencySort {
 		   }
 		  return sb.toString();
 	    }
-
-	public static void main(String[] args) {
-		String str = frequencySort("tree");
-        System.out.println(str);
-        
-        String str2 = frequencySort2("tree");
-        System.out.println(str2);
-	}
-
 }
