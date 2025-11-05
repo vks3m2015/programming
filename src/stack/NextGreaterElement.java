@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
+/*
+The next greater element of some element x in an array is the first greater element
+that is to the right of x in the same array.
+
+Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+Output: [-1,3,-1]
+ */
+
 //https://leetcode.com/problems/next-greater-element-i/
 //Sol - https://leetcode.com/problems/next-greater-element-i/discuss/97595/Java-10-lines-linear-time-complexity-O(n)-with-explanation
 public class NextGreaterElement {

@@ -17,18 +17,15 @@ public class RemoveDuplicates {
 		StringBuilder sb = new StringBuilder();
 		LinkedHashSet<Character> hs = new LinkedHashSet<Character>();
 		
-		for(int i =0; i< inputStr.length(); i++)
-		{
+		for(int i =0; i< inputStr.length(); i++) {
            hs.add(inputStr.charAt(i));
 		}	
 		
-		for(Character ch : hs)
-		{
+		for(Character ch : hs) {
 			sb.append(ch);
 		}
 		
 		return String.valueOf(sb);
-			
 	}
    
 	public static void main(String[] arg)

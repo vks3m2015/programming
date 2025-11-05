@@ -10,8 +10,7 @@ public class RotationOfOther {
 	}
 	
 	//return true if str2 is a rotation of str1 else return false
-	public static boolean isRotationStr(String str1, String str2)
-	{
+	public static boolean isRotationStr(String str1, String str2) {
 		if(str1.length() != str2.length())
 		 return false;
 		

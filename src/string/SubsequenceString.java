@@ -8,34 +8,42 @@ package string;
    Input: str1 = "AXY", str2 = "YADXCP"
    Output: False (str1 is not a subsequence of str2)
  */
-
+//https://leetcode.com/problems/is-subsequence/description/
 public class SubsequenceString {
 
-	public static boolean isSubsequence(String str1, String str2)
-	{
+	public static boolean isSubsequence(String str1, String str2) {
 		int i=0, j=0;     // i for str1 and j for str2
 		int len1 = str1.length(), len2 = str2.length();
-		
-		while(i < len1 && j < len2)
-		{
-			if(str1.charAt(i) == str2.charAt(j) )
-			{
+
+        while(i < len1 && j < len2) {
+			if(str1.charAt(i) == str2.charAt(j) ) {
 				i++;
 				j++;
 			}
 			else 
 				j++;
-			
 		}
-		if(i == len1)
-			return true;
-		else
-			return false;
-		
+        return i == len1;
 	}
+
+    //Using For loop
+    public boolean isSubsequenceForLoop(String s, String t) {
+        if (s.isEmpty()) return true;
+        int n=s.length();
+        int m=t.length();
+        int j=0;
+        for(int i=0;i<m;i++){
+            if(t.charAt(i)==s.charAt(j)){
+                j++;
+            }
+            if(j==n){
+                return true;
+            }
+        }
+        return false;
+    }
 	
-	public static boolean isSubsequenceRec(String str1, String str2, int len1, int len2)
-	{
+	public static boolean isSubsequenceRec(String str1, String str2, int len1, int len2) {
 	    if(len1 == 0)
 		    return true;
 	    

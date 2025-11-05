@@ -88,7 +88,7 @@ class MyLinkedList
 	
 	
 }
-public class ReverseLinkedList {
+public class ReverseLinkedList2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

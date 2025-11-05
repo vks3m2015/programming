@@ -8,7 +8,9 @@ public class MajorityElement {
 
 	/*
 	 * https://leetcode.com/problems/majority-element/
-	 * Given an array nums of size n, return the majority element. The majority element is the element that appears more than n / 2 times. You may assume that the majority element always exists in the array.
+	 * Given an array nums of size n, return the majority element.
+	 * The majority element is the element that appears more than n / 2 times.
+	 * You may assume that the majority element always exists in the array.
 	 * Ex - Input: nums = [2,2,1,1,1,2,2]  Output: 2
 	 */
 	
@@ -34,6 +36,17 @@ public class MajorityElement {
         if (count > (nums.length / 2))
           return candidate;
         
+        return -1;
+    }
+
+    //HashMap Approach
+    public static int majorityElement_4(int[] nums) {
+        Map<Integer, Integer> countMap = new HashMap<>();
+
+        for(int num : nums){
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+            if (countMap.get(num) > nums.length / 2) return num;
+        }
         return -1;
     }
 	
@@ -84,29 +97,6 @@ public class MajorityElement {
 			  count++;
 		}
 		return count;
-	}
-	
-	//HashMap Approach
-	public static int majorityElement_4(int[] nums) {
-		Map<Integer, Integer> countMap = new HashMap<>();
-
-		int majEle = -1;
-		for(int num : nums){
-			Integer count = countMap.get(num);
-			if(count == null){
-				countMap.put(num, 1);
-			}else{
-				countMap.put(num, count+1  );
-			}
-			if(count > Arrays.asList(nums).size()/2){
-				return num;
-			}
-
-		}
-
-
-
-		return -1;
 	}
 	
 	public static void main(String[] args) {

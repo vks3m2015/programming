@@ -2,6 +2,10 @@ package stack;
 
 import java.util.Stack;
 
+/*
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+ */
+
 //https://leetcode.com/problems/min-stack/description/
 //1.Implementation using two stacks
 //2.Implementation using one stack

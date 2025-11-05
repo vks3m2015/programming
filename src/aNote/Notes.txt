@@ -1,0 +1,13 @@
+
+Sum of first n natural numbers = n * (n+1)/2
+XOR =>  a^a = 0
+
+Math.max(a, b)
+
+
+
+map.remove(element)
+map.size()
+
+int[] charHash = new int[26];
+charHash[ch - 'a']++;

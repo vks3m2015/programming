@@ -25,8 +25,7 @@ public class SortByFrequency {
 		Map<Integer,Integer> countMap = new HashMap<Integer, Integer>();
 		
 		//Making Count HashMap
-		for(int element : inputArr)
-		{
+		for(int element : inputArr) {
 			//System.out.println(" element ="+element);
 			if(countMap.containsKey(element))
 			{

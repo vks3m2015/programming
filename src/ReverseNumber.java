@@ -7,8 +7,7 @@ public class ReverseNumber {
 
 	}
 	
-	public static int reverseNumber(int num)
-	{
+	public static int reverseNumber(int num) {
 		int reverseNum = 0;
 		
 		while( num != 0)

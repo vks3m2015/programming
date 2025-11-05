@@ -22,7 +22,8 @@ public class ReverseLinkedList {
 	    }
 	
 	
-	//Idea- at each node u need three var available - prev, curr, next. But improved version - we need only two prev and curr
+	//Idea- at each node u need three var available - prev, curr, next.
+    // But improved version - we need only two prev and curr
    public static ListNode reverseList2(ListNode head) {
 	   
 	   if(head == null) return null;
@@ -50,12 +51,23 @@ public class ReverseLinkedList {
 		printResult(arr1);
 		printResult(arr2);
 		printResult(arr3);
+
+       ListNode head = new ListNode(1);
+       head.next = new ListNode(2);
+       head.next.next = new ListNode(3);
+       head.next.next.next = new ListNode(4);
+       head.next.next.next.next = new ListNode(5);
+
+       reverseList(head);
 	}
 	
 	public static void printResult(int[] arr) {
-		ListNode head = LinkedListOps.buildFromArray(arr);
-		System.out.println(" List == "+LinkedListOps.displayStr(head));
-		System.out.println(" Reverse of list = "+ LinkedListOps.displayStr(reverseList(head)));
+
+
+
+        ListNode head2 = LinkedListOps.buildFromArray(arr);
+		System.out.println(" List == "+LinkedListOps.displayStr(head2));
+		System.out.println(" Reverse of list = "+ LinkedListOps.displayStr(reverseList(head2)));
 		System.out.println("==============================================================");
 		
 	}

@@ -11,21 +11,19 @@ public class ReverseStringWithoutAffectingSplChar {
 
 	}
 	
-	public static String reverseString(String str)
-	{
+	public static String reverseString(String str) {
 		char[] charArray = str.toCharArray();
 		char temp;
 		int start = 0;
 		int end = str.length()-1;
 		
-		while(start < end)
-		{
+		while(start < end) {
+
 		    if(!Character.isAlphabetic(charArray[start]))  //if special character from start
 		    	start++;
 		    else if(!Character.isAlphabetic(charArray[end]))  //if special charter from end
 		    	end--;
-		    else                   //swap when both are charcters
-		    {
+		    else {                  //swap when both are charcters
 		    	temp = charArray[start];
 		    	charArray[start] = charArray[end];
 		    	charArray[end] = temp;

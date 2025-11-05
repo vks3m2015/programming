@@ -1,5 +1,6 @@
 package priorityQueue;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 //https://www.geeksforgeeks.org/connect-n-ropes-minimum-cost/
@@ -35,11 +36,27 @@ class MinCost {
 	}
 
 	// Driver program to test above function
-	public static void main(String args[])
-	{
-		int len[] = { 4, 3, 2, 6 };
+	public static void main(String args[]) {
+		int len[] = { 4, 3, 2, 6 };   //29
 		int size = len.length;
 		System.out.println("Total cost for connecting"
 						+ " ropes is " + minCost(len, size));
+
+        bruteForce(len, size);
 	}
+
+    static void bruteForce(int arr[], int n){
+
+        int cost = 0;
+
+        for(int i =0; i<n-1; i++){
+            Arrays.sort(arr);
+            int curCost = arr[i] + arr[i+1];
+            arr[i] = -1;
+            arr[i+1] = curCost;
+            cost += curCost;
+        }
+
+        System.out.println(" min cost == "+ cost);
+    }
 }

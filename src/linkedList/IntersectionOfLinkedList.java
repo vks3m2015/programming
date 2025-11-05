@@ -53,31 +53,24 @@ class LinkedList3<T>{
 	int size;
 	
 	static class Node<T>{
-		
 		T data;
 		Node<T> next;
-		
 		Node(T data){
 			this.data = data;
 		}
 	}
 	
 	public void add(T data) {
-		
-		Node<T> n = new Node<>(data); 
+		Node<T> n = new Node<>(data);
 		Node<T> ptr = head;
-		
 		if(head == null) {
 			head = n;
 			size++;
 			return;
 		}
-		
 		while(ptr.next != null) {
 			ptr = ptr.next;
 		}
-		
-		
 		ptr.next = n;
 		size++;
 		
@@ -98,55 +91,47 @@ class LinkedList3<T>{
 	}
 	
 	public int calculateSize() {
-		
-		  Node<T> current = head; 
+		  Node<T> current = head;
 		  int count = 0; 
-		  
-		  while (current != null) { 
+		  while (current != null) {
 		         count++; 
 		         current = current.next; 
 		  } 
-		  
-		 return count;   
+		 return count;
 	}
-	
-	public Node<T> intersection(LinkedList3<T> ll2){
-		
-		int size2 = ll2.calculateSize();
-		int size1 = this.calculateSize();
-		
-		System.out.println(" size1 ="+ size1 + "    size2 ="+ size2);
-		int diffSize = 0;
-		
-		if(size2 < size1 ) {
-			diffSize = size1 - size2;
-			
-		} else {
-			diffSize = size2 - size1;
-		}
-		
-		System.out.println(" diffSize ="+diffSize);
-		
-		Node<T> ptr  = head;
-		for(int i=1; i<= diffSize; i++) {
-			
-			ptr = ptr.next;
-		}
-		
-		Node<T> ptr2 = ll2.head;
-		
-		while(ptr != null) {
-			
-			if(ptr == ptr2) {
-				return ptr;
-			}
-			
-			ptr = ptr.next;
-			ptr2 = ptr2.next;
-		}
-		
-		return null;
-		
-	}
-	
+
+    public Node<T> intersection(LinkedList3<T> ll2){
+
+        int size2 = ll2.calculateSize();
+        int size1 = this.calculateSize();
+
+        System.out.println(" size1 ="+ size1 + "    size2 ="+ size2);
+        int diffSize = 0;
+
+        if(size2 < size1 ) {
+            diffSize = size1 - size2;
+
+        } else {
+            diffSize = size2 - size1;
+        }
+
+        System.out.println(" diffSize ="+diffSize);
+
+        Node<T> ptr  = head;
+        for(int i=1; i<= diffSize; i++) {
+            ptr = ptr.next;
+        }
+
+        Node<T> ptr2 = ll2.head;
+        while(ptr != null) {
+            if(ptr == ptr2) {
+                return ptr;
+            }
+            ptr = ptr.next;
+            ptr2 = ptr2.next;
+        }
+        return null;
+    }
+
+
 }

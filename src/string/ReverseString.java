@@ -2,8 +2,7 @@ package string;
 
 public class ReverseString {
 
-	public static void main(String[] arg)
-	{
+	public static void main(String[] arg) {
 		String str = "vikas";
 
 		String stringRev = reverseWithoutUsingExtraSpace(str);
@@ -17,17 +16,12 @@ public class ReverseString {
 		stringRev = reverseStringByMakingNewStr(str);
 
 		System.out.println(" reverseStringByMakingNewStr  == "+stringRev);
-
-
 	}
 
 	/*
 	 *  Reverse String using Recursion
-	 *
 	 */
-
-	public static String reverseRecursively(String inputStr)
-	{
+	public static String reverseRecursively(String inputStr) {
 		if(inputStr.length() == 1)
 			return inputStr;
 
@@ -42,8 +36,7 @@ public class ReverseString {
 	 * Reverse String without using any extra space
 	 *
 	 */
-	public static String reverseWithoutUsingExtraSpace(String inputStr)
-	{
+	public static String reverseWithoutUsingExtraSpace(String inputStr) {
 		char[] charArr = inputStr.toCharArray();
 		//char[] charArr = inputStr.split("");
 
@@ -51,11 +44,9 @@ public class ReverseString {
 		int end = inputStr.length() - 1;
 
 		char temp;
-
-		while(start < end)
-		{
+		while(start < end) {
+            //swap
 			temp = charArr[start];
-
 			charArr[start] = charArr[end];
 			charArr[end] = temp;
 
@@ -63,16 +54,12 @@ public class ReverseString {
 			end--;
 
 		}
-
 		return String.valueOf(charArr);
-
 	}
 
-	public static String reverseStringByMakingNewStr(String inputStr)
-	{
+	public static String reverseStringByMakingNewStr(String inputStr) {
 		StringBuilder revStr = new StringBuilder();
-		for(int i = inputStr.length() - 1; i >= 0;  i-- )
-		{
+		for(int i = inputStr.length() - 1; i >= 0;  i-- ) {
 			revStr.append(inputStr.charAt(i));
 		}
 

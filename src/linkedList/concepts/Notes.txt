@@ -1,0 +1,7 @@
+By convention mid node
+1->2->3->4        mid node - 3
+1->2->3->4->5     mid node - 3
+1->2->3->4->5->6  mid mode will be - 4
+
+while condn to find mid element => fast != null && fast.next != null
+

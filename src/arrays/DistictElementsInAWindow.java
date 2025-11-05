@@ -35,18 +35,18 @@ public class DistictElementsInAWindow {
 		ans.add(countMap.size());
 		
 		for(int i=k; i< length; i++) {
-			
-			if(countMap.get(nums[i-k])== 1) {
-				countMap.remove(nums[i-k]);
-			}else {
-				
-				countMap.put(nums[i-k], countMap.get(nums[i-k])-1);
+
+            int in = nums[i];
+            int out = nums[i -  k];
+
+            countMap.put(out, countMap.get(out)-1);
+			if(countMap.get(out)== 0) {
+				countMap.remove(out);
 			}
 			
-			countMap.put(nums[i], countMap.getOrDefault(nums[i], 0) + 1);
+			countMap.put(in, countMap.getOrDefault(in, 0) + 1);
 			ans.add(countMap.size());
 		}
-		
 		return ans;
     }
 	

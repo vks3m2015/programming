@@ -27,10 +27,8 @@ public class SortNumberString {
 		for(int i=0; i< length; i++)
 			intArr[i] = sc.nextInt();
 		
-		for(int i=0; i<length; i++)
-		{
-			
-			arrayList.add(numbers[intArr[i]]);	
+		for(int i=0; i<length; i++) {
+			arrayList.add(numbers[intArr[i]]);
 		}	
 		
 		Collections.sort(arrayList);
