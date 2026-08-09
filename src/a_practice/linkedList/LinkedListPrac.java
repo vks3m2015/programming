@@ -41,7 +41,7 @@ public class LinkedListPrac {
 
     //https://leetcode.com/problems/odd-even-linked-list/
     public Node oddEvenList(Node head) {
-
+         return null;
     }
 
 

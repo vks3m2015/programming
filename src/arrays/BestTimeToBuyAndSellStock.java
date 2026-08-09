@@ -29,15 +29,18 @@ class BestTimeToBuyAndSellStock {
 		 
 		 for(int i=1; i< prices.length; i++) {
 			 
-			if(prices[i] < lowest_price_so_far) lowest_price_so_far = prices[i];
+			if(prices[i] < lowest_price_so_far) {
+                lowest_price_so_far = prices[i];
+            }
 			 
 			// lowest_price_so_far = Math.min(lowest_price_so_far, prices[i]);
 			 
 			int profit = prices[i] - lowest_price_so_far;
 			
 			//max_profit = Math.max(max_profit, profit);
-			if(profit > max_profit)
-				max_profit = profit;
+			if(profit > max_profit) {
+                max_profit = profit;
+            }
 			
 			 
 			 

@@ -20,6 +20,22 @@ Explanation: Window 1 of size k = 4 is
 this window are 3
  */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class DistictElementsInAWindow {
 
 	
