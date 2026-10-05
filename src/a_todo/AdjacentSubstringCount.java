@@ -1,6 +1,7 @@
 package a_todo;
-//how many times a substring repeats consecutively (adjacently) inside another string.
 /*
+how many maximum times a substring repeats consecutively (adjacently) inside another string.
+
 🧩 Example
 Input:  main = "abcabcabcxyz"   sub  = "abc"
 "abc" occurs 3 times consecutively at the start.
@@ -10,6 +11,23 @@ Input:  main = "abcxyzabcabc"   sub  = "abc"
 Then only the last two are consecutive —
 so the answer is 2 (not counting the earlier isolated one).
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //TURING interview question
 public class AdjacentSubstringCount {

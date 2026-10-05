@@ -13,38 +13,19 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
 public class MinimumSizeSubarraySum {
 
 	
-	public int minSubArrayLen(int target, int[] nums) {
 
-		if (nums == null || nums.length == 0)
-			return 0;
-
-		int startIdx = 0, endIdx = 0, winSum = 0, minLen = Integer.MAX_VALUE;
-
-		while (startIdx < nums.length) {
-
-			winSum += nums[endIdx];
-			endIdx++;
-
-			while (winSum > target) {
-				minLen = Math.min(minLen, endIdx - startIdx);
-				winSum -= nums[startIdx];
-				startIdx++;
-			}
-		}
-		return minLen;
-	}
 
 	public static void main(String[] args) {
         int target = 7;
         int[] nums = {2, 3, 1, 2, 4, 3};
 
-        System.out.println(minSubArrayLen2(target, nums));
+        System.out.println(minSubArrayLen(target, nums));
 
 	}
 
 
 
-        public static int minSubArrayLen2(int target, int[] nums) {
+        public static int minSubArrayLen(int target, int[] nums) {
 
             int left = 0;
             int sum = 0;
@@ -69,5 +50,24 @@ public class MinimumSizeSubarraySum {
         }
 
 
+    public int minSubArrayLen2(int target, int[] nums) {
 
+        if (nums == null || nums.length == 0)
+            return 0;
+
+        int startIdx = 0, endIdx = 0, winSum = 0, minLen = Integer.MAX_VALUE;
+
+        while (startIdx < nums.length) {
+
+            winSum += nums[endIdx];
+            endIdx++;
+
+            while (winSum > target) {
+                minLen = Math.min(minLen, endIdx - startIdx);
+                winSum -= nums[startIdx];
+                startIdx++;
+            }
+        }
+        return minLen;
+    }
 }
