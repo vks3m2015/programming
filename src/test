@@ -1,0 +1,53 @@
+SQL: Combining Successful and Failed Transactions Analysis
+
+Question description
+A financial technology service is conducting a comprehensive analysis of its transactions to identify areas for improvement.
+The company wants to generate a report that details both the successful and failed transactions, focusing on the volume and total amount involved.
+For failed transactions, the report must list all the reasons for failure.
+The result should have the following columns: status | total_transactions | total_amount | failure_reasons.
+
+status - the status of the transaction
+total_transactions - the total number of transactions for a specific status
+total_amount - the total amount of money involved in the transactions for a specific status, rounded to two decimal places, including trailing zeros if necessary (e.g., $5.00)
+failure_reasons - the list of reasons for transaction failures, separated by commas, sorted first descending by number of occurrences, then ascending by reason
+
+The result should be sorted in ascending order by status.
+Note:
+For transactions with a status of "success", set the failure reason to N/A.
+For transactions with a status of "failure" but without a specified reason (null value), set the failure reason to Unknown.
+
+SCHEMA
+-------
+transactions
+
+Name           Type         Constraints       Description
+id             INT          PRIMARY KEY       The identifier of the transaction
+amount         DECIMAL(6,2)                   The amount of the transaction
+status         ENUM('success','failure')      The status of the transaction
+failure_reason VARCHAR(255)                   The reason for transaction failure
+
+SAMPLE DATA TABLES - 
+transactions
+
+id amount status failure_reason
+16 924.85 failure null
+19 882.20 failure null
+18 274.07 failure null
+14 810.33 failure Expired card
+10 789.97 failure Expired card
+9 450.28 failure Expired card
+8 815.06 failure Insufficient funds
+5 451.85 failure Insufficient funds
+1 880.08 failure Invalid card number
+2 573.41 failure Invalid card number
+4 695.50 failure Transaction declined
+
+
+Sample Output
+
++-------+------------------+------------+--------------------------------------------------------------------------------+
+|status |total_transactions|total_amount|failure_reasons                                                                 
++-------+------------------+------------+--------------------------------------------------------------------------------+
+|failure|13  | 8279.86     |Expired card,Transaction declined,Unknown,Insufficient funds,Invalid card number|
+|success|7   |3230.62      |N/A                                                                             |
++-------+------------------+------------+--------------------------------------------------------------------------------+
